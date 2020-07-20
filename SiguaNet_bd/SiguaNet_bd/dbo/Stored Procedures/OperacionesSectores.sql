@@ -1,0 +1,3 @@
+﻿
+---------------------------------OPERACIONES-SECTORES-------------------------------------create procedure OperacionesSectores@idSector as int, @barrio as varchar(50), @codigoOP intas begin	if @codigoOP = 1	begin	if exists(select idSector from SECTORES where idSector = @idSector)	raiserror('Ya existe un sector con ese id, ¡por favor ingrese uno valido!',16,1)	else 	insert into SECTORES values(@barrio)	end	begin	if @codigoOP = 2	if exists(select idSector from SECTORES where idSector = @idSector) 	update SECTORES set barrio = @barrio where idSector = @idSector	else	raiserror('No existe un sector con ese id, ¡por favor ingrese uno valido!',16,1)	end
+end

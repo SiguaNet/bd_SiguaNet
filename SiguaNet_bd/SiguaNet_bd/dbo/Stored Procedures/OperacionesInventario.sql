@@ -1,0 +1,4 @@
+﻿
+------------------------OPERACIONES-INVENTARIO--------------------------------------------------create procedure OperacionesInventario@idTipoAparato as int, @nombreTipo as varchar(20), @cantidad as int, @codigoOP as intas begin	if @codigoOP = 1	begin	if exists(select idTipoAparato from INVENTARIO where idTipoAparato = @idTipoAparato)	raiserror('Ya existe un tipo de aparato con ese id, ¡por favor ingrese uno valido!',16,1)	else 	insert into INVENTARIO values(@nombreTipo, @cantidad)	end	begin	if @codigoOP = 2	if exists(select idTipoAparato from INVENTARIO where idTipoAparato = @idTipoAparato) 	update INVENTARIO set nombreTipo = @nombreTipo, cantidad = @cantidad where idTipoAparato = @idTipoAparato	else	raiserror('No existe un tipo de aparato con ese id, ¡por favor ingrese uno valido!',16,1)
+	end
+	end

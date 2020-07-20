@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[SECTORES] (
+    [idSector] INT          IDENTITY (1, 1) NOT NULL,
+    [barrio]   VARCHAR (50) NOT NULL,
+    CONSTRAINT [PK_SECTORES] PRIMARY KEY CLUSTERED ([idSector] ASC)
+);
+
