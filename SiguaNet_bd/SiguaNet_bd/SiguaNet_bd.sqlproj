@@ -62,6 +62,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="Security\" />
+    <Folder Include="RawScripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\SECTORES.sql" />
@@ -90,5 +91,6 @@
     <Build Include="dbo\Stored Procedures\OperacionesInventario.sql" />
     <Build Include="dbo\Stored Procedures\OperacionesSectores.sql" />
     <Build Include="Security\ges.sql" />
+    <Build Include="RawScripts\bd_SiguaNet_Procedimientos.sql" />
   </ItemGroup>
 </Project>
